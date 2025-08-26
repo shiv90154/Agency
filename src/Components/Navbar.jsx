@@ -1,10 +1,10 @@
-// src/components/Navbar.js
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const navLinks = [
     { name: "Home", path: "/" },
@@ -14,8 +14,25 @@ const Navbar = () => {
     { name: "Contact", path: "/contact" }
   ];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 w-11/12 max-w-5xl bg-white rounded-2xl shadow-lg z-50">
+    <nav
+      className={`fixed top-4 left-1/2 transform -translate-x-1/2 w-11/12 max-w-5xl 
+        rounded-2xl shadow-lg z-50 transition-all duration-300
+        ${scrolled ? "bg-white/40 backdrop-blur-md" : "bg-white/40 backdrop-blur-md"}`}
+    >
       <div className="flex items-center justify-between px-6 py-3">
         {/* Logo */}
         <h1 className="text-xl font-bold text-blue-600">MyLogo</h1>
@@ -35,7 +52,7 @@ const Navbar = () => {
         </ul>
 
         {/* Desktop Button */}
-        <Link 
+        <Link
           to="/contact"
           className="hidden md:block px-4 py-2 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition"
         >
@@ -68,7 +85,7 @@ const Navbar = () => {
             ))}
           </ul>
           <div className="p-4">
-            <Link 
+            <Link
               to="/contact"
               className="block w-full px-4 py-2 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition text-center"
               onClick={() => setIsOpen(false)}
