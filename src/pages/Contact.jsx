@@ -52,7 +52,7 @@ const Contact = () => {
 
   if (isSubmitted) {
     return (
-      <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 pt-28 pb-16 px-4 sm:px-6 lg:px-8 flex items-center justify-center">
+      <div className="min-h-screen mt-20  pt-28 pb-16 px-4 sm:px-6 lg:px-8 flex items-center justify-center">
         <div className="max-w-md mx-auto text-center bg-white rounded-2xl shadow-md p-8">
           <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
           <h2 className="text-2xl font-bold text-gray-900 mb-2">Thank You!</h2>

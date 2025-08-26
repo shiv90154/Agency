@@ -1,5 +1,6 @@
 import React from "react";
 import TextScroll from "../Components/TextScroll";
+
 // import BackgroundCursorTrail from "../Components/BackgroundCursorTrail";
 // Your image array
 // const backgroundImages = [
@@ -63,19 +64,91 @@ const Home = () => {
      
 
       {/* Clients Section */}
-      <section className="py-12 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-center text-gray-500 text-sm uppercase font-semibold mb-8">Trusted by industry leaders</h2>
-          <div className="flex flex-wrap justify-center gap-8 md:gap-16 items-center opacity-60">
-            {["Client 1", "Client 2", "Client 3", "Client 4", "Client 5"].map((client, index) => (
-              <div key={index} className="h-10 w-32 bg-gray-200 rounded-lg flex items-center justify-center">
-                {client}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
+      <section className="py-16 ">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 className="text-center text-gray-600 text-sm uppercase font-semibold tracking-wider mb-12">
+      Trusted by industry leaders
+    </h2>
+    
+    <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-center opacity-80">
+      {[
+        {
+          name: "Microsoft",
+          logo: "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
+          url: "#"
+        },
+        {
+          name: "Google",
+          logo: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
+          url: "#"
+        },
+        {
+          name: "Amazon",
+          logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
+          url: "#"
+        },
+        {
+          name: "Apple",
+          logo: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg",
+          url: "#"
+        },
+        {
+          name: "Netflix",
+          logo: "https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg",
+          url: "#"
+        },
+        {
+          name: "Spotify",
+          logo: "https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg",
+          url: "#"
+        },
+        {
+          name: "Adobe",
+          logo: "https://upload.wikimedia.org/wikipedia/commons/7/7b/Adobe_Systems_logo.svg",
+          url: "#"
+        },
+        {
+          name: "Slack",
+          logo: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Slack_icon_2019.svg",
+          url: "#"
+        },
+        {
+          name: "Airbnb",
+          logo: "https://upload.wikimedia.org/wikipedia/commons/6/69/Airbnb_Logo_B%C3%A9lo.svg",
+          url: "#"
+        },
+        {
+          name: "Tesla",
+          logo: "https://upload.wikimedia.org/wikipedia/commons/e/e8/Tesla_logo.png",
+          url: "#"
+        }
+      ].map((client, index) => (
+        <a
+          key={index}
+          href={client.url}
+          className="flex items-center justify-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105 group"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src={client.logo}
+            alt={client.name}
+            className="h-8 object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
+          />
+        </a>
+      ))}
+    </div>
+    
+    <div className="mt-12 text-center">
+      <p className="text-gray-500 text-sm">
+        Join 2,000+ companies that trust our solutions
+      </p>
+      <button className="mt-4 px-6 py-2 bg-white border border-gray-200 rounded-lg text-gray-700 font-medium hover:bg-gray-50 transition-colors duration-200 shadow-sm">
+        View customer stories
+      </button>
+    </div>
+  </div>
+</section>
       {/* Features Section */}
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
@@ -305,6 +378,7 @@ const Home = () => {
             ))}
           </div>
         </div>
+        
       </section>
 
       {/* CTA Section */}

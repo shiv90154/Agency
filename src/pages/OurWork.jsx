@@ -87,7 +87,7 @@ const OurWork = () => {
     : workItems.filter(item => item.category === activeCategory);
 
   return (
-    <div className="min-h-screen bg-gray-50 py-20 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen mt-20 py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-16">
