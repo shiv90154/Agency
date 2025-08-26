@@ -1,0 +1,30 @@
+import React, { useState, useEffect } from 'react';
+import Loader from './components/Loader';
+
+function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate data loading
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  return (
+    <div className="App">
+      {isLoading && <Loader />}
+      
+      {!isLoading && (
+        <div>
+          <h1>Your Content Here</h1>
+          <p>Your website content loads after the loader disappears.</p>
+        </div>
+      )}
+    </div>
+  );
+}
+
+export default App;

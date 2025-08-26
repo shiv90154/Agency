@@ -1,10 +1,35 @@
 import React from "react";
-
+import TextScroll from "../Components/TextScroll";
+// import BackgroundCursorTrail from "../Components/BackgroundCursorTrail";
+// Your image array
+// const backgroundImages = [
+//   "https://images.pexels.com/photos/30082445/pexels-photo-30082445.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+//   "https://images.unsplash.com/photo-1692606743169-e1ae2f0a960f?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+//   "https://images.unsplash.com/photo-1709949908058-a08659bfa922?q=80&w=1200&auto=format",
+//   // Add more images as needed
+// ];
+import SectionCursorTrail from "../Components/SectionCursorTrail";
+ const images = [
+    "https://images.pexels.com/photos/30082445/pexels-photo-30082445.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "https://images.unsplash.com/photo-1692606743169-e1ae2f0a960f?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/photo-1709949908058-a08659bfa922?q=80&w=1200&auto=format",
+    "https://images.unsplash.com/photo-1548192746-dd526f154ed9?q=80&w=1200&auto=format",
+    "https://images.unsplash.com/photo-1644141655284-2961181d5a02?q=80&w=3000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  ];
 const Home = () => {
   return (
     <div className="w-full overflow-hidden mt-25">
+       {/* <BackgroundCursorTrail images={backgroundImages} maxImages={10} /> */}
+
       {/* Hero Section */}
-      <section className=" text-gray-700 py-16 md:py-24 px-4">
+     
+  <SectionCursorTrail 
+          images={images} 
+          maxImages={6}
+          className="min-h-[500px]  p-8 mb-16 flex items-center justify-center"
+          imgClass="w-28 h-36 sm:w-36 sm:h-44"
+        >
+           <section className=" text-gray-700 py-16 md:py-24 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             Transform Your Digital Presence
@@ -22,6 +47,20 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+        </SectionCursorTrail>
+     
+        <section>
+        
+          <TextScroll 
+            text="This text scrolls faster" 
+            default_velocity={10}
+            className="text-4xl font-extrabold text-gray-700"
+          />
+        </section>
+
+
+     
 
       {/* Clients Section */}
       <section className="py-12 bg-gray-50">

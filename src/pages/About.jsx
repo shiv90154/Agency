@@ -1,5 +1,5 @@
 import React from "react";
-
+import TextScroll from "../Components/TextScroll";
 const About = () => {
   // Team members data
   const teamMembers = [
@@ -197,6 +197,42 @@ const About = () => {
           </button>
         </section>
       </div>
+
+
+      <div className="min-h-screen bg-gray-900 text-white p-8">
+      <div className="space-y-20">
+        {/* <section>
+          <h2 className="text-2xl font-bold mb-4">Default Scrolling Text</h2>
+          <TextScroll 
+            text="This text scrolls at the default speed" 
+            className="text-4xl font-bold text-blue-400"
+          />
+        </section> */}
+        
+        <section>
+          <h2 className="text-2xl font-bold mb-4">Faster Scrolling Text</h2>
+          <TextScroll 
+            text="This text scrolls faster" 
+            default_velocity={10}
+            className="text-3xl font-extrabold text-purple-400"
+          />
+        </section>
+        
+        {/* <section>
+          <h2 className="text-2xl font-bold mb-4">Reverse Direction</h2>
+          <TextScroll 
+            text="This text scrolls in reverse direction" 
+            reverse={true}
+            className="text-5xl font-bold text-green-400"
+          />
+        </section> */}
+        
+        <section className="h-screen flex items-center justify-center">
+          <h2 className="text-3xl">Scroll down to see the effect</h2>
+        </section>
+      </div>
+    </div>
+
     </div>
   );
 };
