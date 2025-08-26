@@ -10,6 +10,7 @@ import TextScroll from "../Components/TextScroll";
 //   // Add more images as needed
 // ];
 import SectionCursorTrail from "../Components/SectionCursorTrail";
+import StatsSection from "../Components/StatsSection";
  const images = [
     "https://images.pexels.com/photos/30082445/pexels-photo-30082445.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     "https://images.unsplash.com/photo-1692606743169-e1ae2f0a960f?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -207,7 +208,7 @@ const Home = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-16 bg-gray-50 px-4">
+      <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Services</h2>
@@ -292,7 +293,7 @@ const Home = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-16 bg-gray-50 px-4">
+      <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">What Our Clients Say</h2>
@@ -362,24 +363,7 @@ const Home = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            {[
-              { number: "150+", label: "Projects Completed" },
-              { number: "95%", label: "Client Satisfaction" },
-              { number: "50+", label: "Happy Clients" },
-              { number: "5+", label: "Years Experience" }
-            ].map((stat, index) => (
-              <div key={index}>
-                <h3 className="text-4xl md:text-5xl font-bold mb-2">{stat.number}</h3>
-                <p className="text-blue-100">{stat.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-        
-      </section>
+   <StatsSection />
 
       {/* CTA Section */}
       <section className="py-16 bg-gray-100 px-4">
