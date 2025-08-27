@@ -80,5 +80,4 @@ agency-website/
 
 If you’d like to connect or collaborate, feel free to reach out:
 
-* GitHub: [@your-username](https://github.com/your-username)
-* Email: [your-email@example.com](mailto:your-email@example.com)
+* Email: [shiva90154@gmail.com](mailto:shiva90154@gmail.com)
