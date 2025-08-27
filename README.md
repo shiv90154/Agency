@@ -1,13 +1,84 @@
-# React + Vite
+# 🚀 Agency Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive **Agency Website** built with **React.js**.
+This project is designed to showcase agency services, portfolio, and contact information in a clean and professional way.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📌 Features
 
-## Expanding the ESLint configuration
+* Responsive and mobile-friendly UI
+* Smooth navigation and animations
+* Services, Portfolio, and Contact sections
+* Reusable and modular React components
+* Easy to customize and extend
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# Agency
+---
+
+## 🛠️ Tech Stack
+
+* **React.js** – Frontend library
+* **React Router** – For navigation
+* **Tailwind CSS / CSS Modules** (depending on your styling choice)
+* **Lucide Icons / FontAwesome** – For icons
+
+---
+
+## 📂 Project Structure
+
+```
+agency-website/
+│── public/          # Static assets
+│── src/
+│   ├── components/  # Reusable UI components
+│   ├── pages/       # Page components (Home, About, Services, Contact)
+│   ├── assets/      # Images, icons, etc.
+│   ├── App.js       # Main app component
+│   └── index.js     # Entry point
+│── package.json     # Dependencies & scripts
+│── README.md        # Project documentation
+```
+
+---
+
+## ⚡ Installation & Setup
+
+1. Clone the repository
+
+   ```bash
+   git clone https://github.com/your-username/agency-website.git
+   cd agency-website
+   ```
+
+2. Install dependencies
+
+   ```bash
+   npm install
+   ```
+
+3. Start development server
+
+   ```bash
+   npm start
+   ```
+
+4. Build for production
+
+   ```bash
+   npm run build
+   ```
+
+---
+
+## 📸 Screenshots
+
+*Add some screenshots or GIFs of your website here.*
+
+---
+
+## 📬 Contact
+
+If you’d like to connect or collaborate, feel free to reach out:
+
+* GitHub: [@your-username](https://github.com/your-username)
+* Email: [your-email@example.com](mailto:your-email@example.com)
